@@ -49,5 +49,14 @@ void WSPatchParser::apply(const char *patch) {
 }
 
 void WSPatchParser::loadFile(const char* resourceFile) {
+    FILE* fp = nullptr;
+    fopen_s(&fp, resourceFile, "w+, ccs=UNICODE");
 
+    if(fp == nullptr) {
+        cout << "Could not open patch file" << endl;
+        return;
+    }
+
+    cout << "Loading: " << resourceFile << endl;
+//    fread_s(&fp, resourceFile, strlen(resourceFile), _TRUNCATE);
 }

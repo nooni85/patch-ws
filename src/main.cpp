@@ -10,12 +10,12 @@ int main(int argc, char *argv[]) {
 
     if (argc > 1) {
         parser.apply(argv[1]);
+
+        printf("Press Any Key To Exit...\r\n");
+        getch();
     } else {
         cout << "Usage: " << argv[0] << " <file>" << endl;
     }
-
-    // printf("Press Any Key To Exit...\r\n");
-    // getch();
 
     return 0;
 }
